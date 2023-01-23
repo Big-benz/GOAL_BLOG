@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background: url("/static/PHOTOS/pexels-markus-spiske-114296.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            width: 90%;
+        }
+        h3{
+            color: red;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            padding: 10rem;
+
+        }
+        input{
+            width: 25rem;
+            height: 2rem;
+            border: none;
+        }
+        button{
+            width: 10rem;
+            height: 3rem;
+            background-color:rgb(248, 153, 118);
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 1rem;
+        }
+        button:hover{
+            background-color: rgb(66, 66, 66);
+        }
+        a{
+            color: white;
+        }
+        h4{
+            color:rgb(248, 153, 118);
+        }
+    </style>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="username" placeholder="Enter your Username">
+        <input type="password" name="password" placeholder="Enter your password">
+        <h4>Don't have an account? Register <a href="register">here</a></h4>
+        <button type="submit">Login</button>
+        
+        {% for message in messages %}
+        <h3>{{message}}</h3>
+        {% endfor %}
+    </form>
+    
+</body>
+</html>

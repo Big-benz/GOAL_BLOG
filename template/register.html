@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <style>
+        body{
+            background: url('/static/PHOTOS/pexels-markus-spiske-114296.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            width: 90%;
+        }
+        h3{
+            position: absolute;
+            color: red;
+            display: grid;
+            place-items: center;
+            
+        }
+        form{
+            display: grid;
+            place-items: center;
+            gap: 2rem;
+            transform: translate(0, 45%);
+        }
+        input{
+            width: 25rem;
+            height: 2rem;
+            border: none;
+        }
+        button{
+            width: 10rem;
+            height: 3rem;
+            background-color:rgb(248, 153, 118);
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-size: 1rem;
+        }
+        button:hover{
+            background-color: rgb(66, 66, 66);
+        }
+    </style>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name= 'username'class="username" placeholder="Enter your Username">
+        <input type="text" name = 'email' class="email" placeholder="Enter your Email">
+        <input type="password" name="password" id="" placeholder="Enter your Password">
+        <input type="password" name =password2 placeholder="Confirm your Password">
+        <button type="submit">Submit</button>
+    </form>
+    {% for message in messages %}
+    <h3>{{message}}h</h3>
+    {% endfor %}
+    
+</body>
+</html>

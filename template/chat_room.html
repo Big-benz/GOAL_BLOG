@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.container {
+  background-color: rgb(135, 135, 135);
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  background-color:rgb(248, 153, 118);
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+.room{
+  color: white;
+}
+.room-count{
+  position: absolute;
+  top: .6rem;
+  left: 24.5rem;
+  display: grid;
+  place-items: center;
+  font-size: .8rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color:rgb(248, 153, 118);
+  border-radius: 50%;
+}
+</style>
+<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+</head>
+<body>
+
+<h2 class="room">{{room}}</h2>
+
+
+<div id="recieve">
+  
+
+<!-- <div class="container darker">
+  <b>Tom</b><p>Hello Everyone, How Are You Guys Doing?</p>
+  <span class="time-left">20th, April 2021</span>
+</div> -->
+
+</div>
+
+
+<script>
+
+function getMessages() {
+
+  fetch('/receivemessages/{{room}}/')
+
+    .then(function(response){
+
+      let data = response.json()
+
+      return data
+
+    })
+
+    .then(function(data){
+
+      console.log(data);
+
+      const container = document.getElementById('recieve');
+
+      container.innerHTML = '';
+
+      data.messages.forEach(function(message) {
+
+
+        const receivedMessages = `<div class='container darker'><b> ${message.username} </b><p> ${message.messages} </p><span class='time-left'> ${message.date}</span></div>`;
+
+        container.innerHTML += receivedMessages;
+
+      });
+
+    })
+
+    .catch(function(error){
+
+      console.error('this page no go well')
+
+    });
+
+}
+
+setInterval(getMessages, 1000);
+</script>
+
+
+
+<div class="container">
+    <style>
+      body{
+        background-color: rgb(59, 59, 59);
+      }
+    input[type=text], select {
+    width: 90%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    }
+
+    .btn{
+    width: 7%;
+    height: 2.3rem;
+    background-color: rgb(248, 153, 118);
+    color:white;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+
+    input[type=submit]:hover {
+    color:white;
+    background-color: rgb(248, 153, 118);
+    }
+
+    div {
+    border-radius: 5px;
+    background-color:rgb(135, 135, 135);
+    padding: 20px;
+    }
+    </style>
+
+    <form id="post-form">
+        {% csrf_token %}
+        <input type="hidden" name="username" id="username" value="{{username}}"/>
+        <input type="hidden" name="room_id" id="room_id" value="{{room_details.id}}"/>
+        <input type="text" name="message" id="message" width="100px" placeholder="send a message"/>
+        <button type="submit" class="btn"><i class='bx bxs-send'></i></button>
+    </form>
+</div>
+
+
+</body>
+
+<script type="text/javascript">
+  
+  // $(document).on('submit','#post-form',function(e){
+  //   e.preventDefault();
+
+  //   $.ajax({
+  //     type:'POST',
+  //     url:'/send',
+  //     data:{
+  //         username:$('#username').val(),
+  //         room_id:$('#room_id').val(),
+  //         message:$('#message').val(),
+  //       csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+  //     },
+  //     success: function(data){
+  //        //alert(data)
+  //     }
+  //   });
+  //   document.getElementById('message').value = ''
+  // });
+  document.addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append('username', document.querySelector('#username').value);
+  formData.append('room_id', document.querySelector('#room_id').value);
+  formData.append('message', document.querySelector('#message').value);
+  formData.append('csrfmiddlewaretoken', document.querySelector('input[name=csrfmiddlewaretoken]').value);
+
+  fetch('/send', {
+    method: 'POST',
+    body: formData,
+  }).then(function(response) {
+      let data = response.json()
+      return data
+  }).catch(function(error){
+    console.error('something went wrong')
+  });
+
+  document.querySelector('#message').value = '';
+});
+
+</script>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <title>room</title>
+  </head>
+  <body>
+    <style>
+      body {
+        background-color: black;
+      }
+      .new-room {
+        font-size: 2.7rem;
+      }
+      .new-room-link {
+        font-family: myFont;
+        margin-top: 2rem;
+        padding: 2rem;
+        display: flex;
+        gap: 2rem;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(22, 22, 22);
+        border-radius: 1rem;
+      }
+      .new-room-link h2{
+        margin-top:.7rem;
+      }
+      .room-wrapper {
+        color: white;
+      }
+      .rooms-available {
+        display: grid;
+        place-items: center;
+      }
+      .list-of-rooms {
+        width: 8rem;
+        height: 3rem;
+      }
+      .room-display {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        place-items: center;
+        column-gap: 0.4rem;
+        text-align: center;
+       
+      }
+      .text-wrapper{
+        width: 13rem;
+        height: 6rem;
+        display: flex;
+        place-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        background-color: rgb(22, 22, 22);
+        border-radius: 1rem;
+        margin: 1rem 1rem;
+        padding-left: .4rem;
+      }
+      .text-wrapper h3{
+        font-family: myFont;
+        margin-top: .5rem;
+      }
+      h2{
+        display: grid;
+        place-items: center;
+        font-family: myFont;
+      }
+      @font-face {
+        font-family:myFont;
+        src: url('static/FONTS/google1.ttf');
+      }
+
+    </style>
+    <div class="create-new-room">
+      <div class="room-wrapper">
+        <a href="new-room" class="new-room-link">
+          <span><i class="new-room bx bxs-plus-square"></i></span>
+          <h2 class="text">Create/Enter Room</h2>
+        </a>
+      </div>
+      <div class="room-wrapper">
+        <div class="rooms-available">
+          {% if all_room > 1 or all_room == 0 %}
+          <h2>{{all_msg}} messages from {{all_room}} available rooms...</h2>
+          {% else %}
+          <h2>{{all_msg}} message from {{all_room}} available room...</h2>
+
+          {% endif %}
+        </div>
+        <div class="list-of-rooms">
+          <div class="room-display">
+            {% for available_room in available_rooms %}
+            <div class="text">
+              <div class="text-wrapper">
+                <span><i class="new-room bx bxs-plus-square plus"></i></span>
+                <h3>{{available_room.name}}</h3>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

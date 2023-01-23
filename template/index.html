@@ -1,0 +1,2374 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to CSS -->
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- Link to boxicon NPM -->
+
+    <link rel="stylesheet"
+
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- Link to RemixIcons NPM -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Title -->
+
+    <title>Goal.com</title>
+
+</head>
+
+<!-- Header and body item of page -->
+
+<body  class="body" id="body">
+
+   <header class="header" id="header">
+
+        <div class="header-menu">
+
+            <a href="#" class="header-menu-items">
+
+                <!-- Logo -->
+
+                <div class="logo">
+
+                    <img src="{% static 'PHOTOS/Goal logo.jpg' %}" alt="" class="logo-img">
+
+                </div>
+
+                <!-- Navigation bar -->
+
+                <div class="list-items">
+
+                    <nav class="nav-bar">
+
+                        <ul>
+
+                            <li><a href="#">Live Scores</a></li>
+
+                            <li><a href="#">Breaking News</a></li>
+
+                            <li><a href="#">Transfers</a></li>
+
+                            <li><a href="#" id="culture" class="culture">Cultures <i class='bx bxs-down-arrow'></i></a></li>
+
+                            <li><a href="#" id="premier" class="premier">Premier League</a> <i class='bx bxs-down-arrow'></i>
+
+                            <li><a href="#" id="laliga" class="laliga">La Liga</a> <i class='bx bxs-down-arrow'></i></li>
+
+                            <li><a href="#" id="afcon" class="afcon">AFCON</a>  <i class='bx bxs-down-arrow'></i></li>
+
+                            <li><a href="#" id="more">More</a> <i class='bx bxs-down-arrow'></i></li>
+
+                            {% if user.is_authenticated %}
+
+                            <li><a href="logout">Sign Out</a></li>
+
+                            {% else %}
+
+                            <li><a href="login">Sign In</a></li>
+
+                            {% endif %}
+
+                           
+
+                            
+                           
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <!-- Search box and close item container -->
+
+                <div class="icons">
+
+                    <i class='bx bx-search' class="search-icon" id="search-icon"></i>
+
+                    <i class='bx bx-dots-vertical-rounded' class="settings" id="settings"></i>
+
+                </div>
+
+                <!-- Setting portion -->
+
+                <div class="settings-tab" id="settings-tab">
+
+                    <nav class="settings-nav">
+
+                        <ul>
+
+                            <li><a href="#"><i class="ri-global-line"></i>  language</a></li>
+
+                            <li><a href="#"><i class="ri-settings-3-line"></i>  Settings</a></li>
+
+                            <li><a href="#"><i class="ri-question-line"></i>  Help</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <!-- Drop down menus -->
+             
+                <div class="inside-navbar" id="inside-navbar">
+
+                    <nav class="nav nav-container1">
+
+                        <ul>
+
+                            <li class="disc"><a href="#" >DISCOVER</a></li>
+
+                            <li><a href="#">Lgendary teams</a></li>
+
+                            <li><a href="#">forgotten footballers</a></li>
+
+                            <li><a href="#">features</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <nav class="nav nav-container2">
+
+                        <ul>
+
+                            <li class="disc"><a href="#" >NXGN</a></li>
+
+                            <li><a href="#">class of 2021</a></li>
+
+                            <li><a href="#">class of 2020</a></li>
+
+                            <li><a href="#">class of 2019</a></li>
+
+                            <li><a href="#">class of 2018</a></li>
+
+                            <li><a href="#">class of 2017</a></li>
+
+                            <li><a href="#">class of 2016</a></li>
+
+                            <li><a href="#">Latest News and profiles</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <nav class="nav nav-container3">
+
+                        <ul>
+
+                            <li class="disc"><a href="#" >Goal 50</a></li>
+
+                            <li><a href="#">2019-20</a></li>
+
+                            <li><a href="#">2018-19</a></li>
+
+                            <li><a href="#">2017-18</a></li>
+
+                            <li><a href="#">2016-17</a></li>
+
+                            <li><a href="#">2017-18</a></li>
+
+                            <li><a href="#">Latest news and specials</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="laliga-container" id="laliga-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">Info</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">Breaking News</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="team-box edit">
+
+                        <li><a href="#" class="teams1">Teams</a></li>
+
+                        <li><a href="#">Barcelona</a></li>
+
+                        <li><a href="#">Real Madrid</a></li>
+
+                        <li><a href="#">Atletico Madrid</a></li>
+
+                        <li><a href="#">Sevilla</a></li>
+
+                        <li><a href="#">Valencia</a></li>
+
+                        <li><a href="#">Others</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="players">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">Players</a></li>
+
+                        <li><a href="#">Karim Benzema</a></li>
+
+                        <li><a href="#">Gerrard Pique</a></li>
+
+                        <li><a href="#">Luka Modric</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+        </div>
+
+        <div class="afcon-container" id="afcon-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">Info</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">Breaking News</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="team-box edit">
+
+                        <li><a href="#" class="teams1">Teams</a></li>
+
+                        <li><a href="#">Nigeria</a></li>
+
+                        <li><a href="#">Senegal</a></li>
+
+                        <li><a href="#">Cameroon</a></li>
+
+                        <li><a href="#">Egypt</a></li>
+
+                        <li><a href="#">Ivory Coast</a></li>
+
+                        <li><a href="#">Others</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="players">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">Players</a></li>
+
+                        <li><a href="#">Mohammed Salah</a></li>
+
+                        <li><a href="#">Sadio Mane</a></li>
+
+                        <li><a href="#">Ahmed Musa</a></li>
+
+                        <li><a href="#">Kalidou Koulibaly</a></li>
+
+                        <li><a href="#">Riyad Mahrez</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+        </div>
+
+        <div class="epl-container" id="epl-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">Info</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">Breaking News</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="team-box edit">
+
+                        <li><a href="#" class="teams1">Teams</a></li>
+
+                        <li><a href="#">Man United</a></li>
+
+                        <li><a href="#">Chelsea</a></li>
+
+                        <li><a href="#">Man City</a></li>
+
+                        <li><a href="#">Liverpool</a></li>
+
+                        <li><a href="#">Arsenal</a></li>
+
+                        <li><a href="#">others</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="players">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">Players</a></li>
+
+                        <li><a href="#">Bruno fernandes</a></li>
+
+                        <li><a href="#">Kevin de bruyne</a></li>
+
+                        <li><a href="#">Mohammed salah</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+        </div>
+
+        <div class="more-container" id="more-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">NPFL</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">News</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">ENYIMBA</a></li>
+                        
+                        <li><a href="#">AWKA UNITED</a></li>
+
+                        <li><a href="#">LOBI STARS</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <div class="info">
+
+                    <nav>
+
+                        <ul class="team-box edit">
+
+                            <li><a href="#"  class="teams1">WORLD CUP QUALIFIERS AFRICA</a></li>
+
+                            <li><a href="#">Tables</a></li>
+
+                            <li><a href="#">News</a></li>
+
+                            <li><a href="#">Fixtures & Results</a></li>
+
+                            <li><a href="#">NIGERIA</a></li>
+
+                            <li><a href="#">GHANA</a></li>
+
+                            <li><a href="#">SENEGAL</a></li>
+
+                        </ul>
+
+                    </nav>
+                
+            </div>
+
+            <div class="players serie-A">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">SERIE A</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">News</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">INTER MILAN</a></li>
+
+                        <li><a href="#">JUVENTUS</a></li>
+
+                        <li><a href="#">AC MILAN</a></li>
+
+                    </ul>
+                    
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="bundesliga edit">
+
+                        <li><a href="#" class="teams1">BUNDESLIGA</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">News</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">BAYERN MUNICH</a></li>
+
+                        <li><a href="#">DORTMUND</a></li>
+
+                        <li><a href="#">LEIPZIG</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+     
+   </header>
+  
+   <!-- Search Container -->
+
+   <section class="search-bar" id="search-bar">
+
+        <div class="search-box-container" id="search-box-container">
+
+            <div class="search-box">
+
+                <span class="search-description">Find latest sports news....</span>
+
+                <form action="" class="form-box">
+
+                    <input type="text" class="search" placeholder="search sports news">
+
+                    <button class="btn search-btn"><a href="#"> <i class="ri-search-line" id="open-icon"></i></a></button>
+
+                </form>
+             
+            </div>
+
+            <!-- Close search container -->
+
+            <button class="btn close-icon" id="close-icon"> <i class="ri-close-line"></i></button>
+
+        </div>
+
+        <!--Top stories container-->
+
+        <section class="breaking-news section section-header" id="breaking-news">
+
+            <div class="breaking-news-container container d-grid">
+
+                <div class="headline">
+
+                    <h3 class="headline-text">
+
+                        <span class="items-place">Top Stories</span>
+
+                    </h3>
+
+                </div>
+
+                <!-- Automated greetings text -->
+
+                <style>
+                    .greeting-text{
+                        position: absolute;
+                        right: 16rem;
+                        top: 2rem;
+                    }
+                    .greeting-text ul{
+                        display: flex;
+                        gap: 1rem;
+                        
+                    }
+                    @font-face {
+                        font-family:myFont;
+                        src: url('static/FONTS/Product-Sans-Bold-Italic.ttf');
+                    }
+                
+                    .greeting-text ul li{
+                        
+                        font-family: myFont;
+                        font-size: 1.3rem;
+                        font-weight: 400;
+
+
+                    }
+                    
+                </style>
+
+                {% if user.is_authenticated %}
+
+                <div class="greeting-text">
+
+                    <ul>
+                        <li class="greet">Welcome {{user.username}},</li>
+                        <li class="greeting" id="greeting"></li>
+                    </ul>
+
+                </div>
+
+                {% else %}
+
+                <div class="greeting-text">
+
+                    <ul>
+                        <li class="greet" >Hello football fans,</li>
+                        <li class="greeting" id="greeting"></li>
+
+                    </ul>
+
+                   
+
+                </div>
+
+                {% endif %}
+
+               
+
+                <div class="breaking-news-content d-grid">
+
+                    
+              
+                    <div class="main-container main-container-1 d-grid">
+
+                        
+
+                        <a href= "#" class="article breaking-news-article breaking-news-article-1">
+
+                             <img src="{% static 'PHOTOS/breaking-news-1.jpg' %}" alt="" class="breaking-news-image">
+
+                             <div class="article-text-container">
+
+                                 <div class="article-text">
+
+                                     <button class="chelsea-btn btn"><a href="#">Chelsea</a></button>
+
+                                     <button class="epl-btn btn"><a href="#">Premier League</a></button>
+
+                                 </div>
+
+                             </div>
+
+                             <div class="breaking-news-text">
+
+                            
+
+                                 <h3 class="chelsea-news">Tuchel's driving but sterling is the key to <br> success.</h3>
+
+                          
+
+                             </div>
+
+                             <div class="article-text">
+
+                                <p class="article-description">Chelsea lost some key men during a turbulent summer but they held <br> on to their manager and signed a transformative player.</p>
+
+                            </div>
+
+                            <div class="article-icons">
+
+                                <span><i class="ri-time-line news-icons"></i>  5h</span>
+
+                                <span><i class="ri-message-line news-icons"></i>  11</span>
+
+                                <span class="story-container">Full Story    <i class="ri-arrow-right-line"></i></span>
+                                
+                            </div>
+
+                        </a>
+
+            
+
+                    </div>
+
+              
+                    
+
+                    <div class="main-container main-container-2 d-grid">
+
+                        <a href="#" class="article breaking-news-article breaking-news-article-2">
+
+                             <img src="{% static 'PHOTOS/breaking-news-2.jpg' %}" alt="" class="breaking-news-image">
+
+                            <div class="article-text-container">
+
+                                 <div class="african-text">
+
+                                     <button class="african-btn btn"><a href="#" class="african-stars-button african">African All Stars</a></button>
+
+                                 </div>
+
+                                 <h3 class="african-stars-text african">is hassenhutlle's 3-5-2 good for <br> aribo and djenepo</h3>
+
+                             </div>
+
+                            <div class="african-icons">
+
+                                <br>
+
+                                <span class="arsenal-boys"><i class="ri-time-line news-icons"></i>  1h</span>
+                    
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="main-container main-container-3">
+
+                        <a href="#" class="article breaking-news-article breaking-news-article-3">
+
+                             <img src="{% static 'PHOTOS/breaking-news-3.jpg' %}" alt="" class="breaking-news-image">
+
+                             <div class="article-text-container">
+
+                                 <div class="article-text">
+
+                                     <button class="chelsea-btn btn"><a href="#">Culture</a></button>
+
+                                 </div>
+
+                             </div>
+
+                             <h3 class="african">Sauce squad:The 16 best dressed <br> PL players </h3>
+
+                                <div class="article-icons arsenal-boys">
+
+                                <span><i class="ri-time-line news-icons"></i>  2h</span>
+
+                                <span><i class="ri-message-line news-icons"></i>  3</span>
+                                
+                            </div>
+                          
+                        </a>
+                        
+
+                    <div class="top-stories-continued-content d-grid">
+
+
+                        {% for blog in blogs reversed %}
+
+                        
+
+                        <div class="top-stories-continued d-grid">
+
+                           
+
+                            <a href="blog/{{blog.id}}" class="article-wrapper breaking-news-article breaking-news-article-4">
+
+                                <img src="{{blog.image.url}}" alt="" class="top-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">{{blog.button_text}}</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                
+
+                                <a href="blog/{{blog.id}}">
+                        
+                                    <h3 class="african">{{blog.title | truncatewords:10}}</h3>
+                        
+                                    <div class="article-icons arsenal-boys">
+                        
+                                        <span>{{blog.date}}</span>
+                        
+                                    </div>
+                        
+                                </a>
+                        
+                                
+
+                             
+                            </a>
+
+                           
+
+                        </div>
+
+                        {% endfor %}
+
+                        
+
+
+                        
+                    
+                    </div> 
+                   
+                </div>
+
+            </div>
+
+        </section>
+
+ 
+
+        <!-- video container -->
+
+        <section class="videos-container" id="video-container">
+
+            <div class="breaking-news-content d-grid">
+
+                    <div class="video-banner">
+
+                        <h3>Videos</h3>
+
+                    </div>
+
+                    <div class="main-container main-container-1  video-container-1 d-grid">
+
+                        <div class=" breaking-news-article-1 video-breaking-news">
+
+                            <div class="video-wrapper">
+
+                                <video class="video-container-main-video" muted autoplay loop src="{% static 'VIDEO\videoplayback.mp4' %}" type="video/mp4"></video>
+
+                                <!-- Play and Pause -->
+
+                                <div class="play-and-pause-icons">
+                                   
+                                   <span class="play-btn">
+                                       <i class="ri-play-line"></i>
+                                   </span>
+                                   <span class="pause-btn">
+                                       <i class="ri-pause-line"></i>
+                                   </span>
+                                </div>
+
+                            </div>
+
+                       
+
+                             <div class="article-text-container">
+
+                                 <div class="article-text">
+
+                                     <button class="chelsea-btn btn"><a href="#">African all stars</a></button>
+
+                                     <button class="epl-btn btn"><a href="#">Premier League</a></button>
+
+                                 </div>
+
+                             </div>
+
+                             <div class="breaking-news-text">
+
+                                 <h3 class="chelsea-news video-heading">All today's top African football videos</h3>
+
+                             </div>
+
+                             <div class="article-text">
+
+                                <p class="article-description video-article-description">Our African football channel has all the latest continental and african all stars content you need.</p>
+
+                            </div>
+
+                            <div class="article-icons video-article-icons">
+
+                                <span><i class="ri-time-line news-icons"></i>  11 August 2022</span>
+
+                                <span><i class="ri-message-line news-icons"></i>  32</span>
+
+                                <span class="story-container story-container-1">Full Story    <i class="ri-arrow-right-line"></i></span>
+
+                            </div>
+                            
+                        </div>
+
+
+                    </div> 
+
+                    <div class="top-stories-continued-content videos-stories-continued-content d-grid">
+
+                        <div class="top-stories-continued video-stories-continued  d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-4 video-breaking-news">
+
+                                <img src="{% static 'PHOTOS/benzema.jpg' %}" alt="" class="video-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Real Madrid</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african real-madrid">Benzema becomes real madrid second highest top scorer.</h3>
+
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  10th August 2022</span>
+
+                                   <span><i class="ri-message-line news-icons"></i>  8</span>
+
+                               </div>
+                             
+                           </a>
+
+                        </div>
+
+                        <div class="top-stories-continued video-stories-continued d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-5">
+
+                                <img src="{% static 'PHOTOS/Gini.jpg' %}" alt="" class="video-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Serie A</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african Roma">Salah convinced me to join Roma - Wijnaldum</h3>
+
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>   9th August 2022</span>
+
+                                   <span><i class="ri-message-line news-icons"></i>  5</span>
+                                   
+                               </div>
+                             
+                           </a>
+
+                        </div>
+                    
+                        <div class="top-stories-continued video-stories-continued d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-6">
+
+                                <img src="{% static 'PHOTOS/haaland.jpg' %}" alt="" class="video-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">E.Haaland</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african haaland">Haaland shares key trait with Messi says Guardiola</h3>
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>   8th August 2022</span>
+
+                                   <span><i class="ri-message-line news-icons"></i>  16</span>
+                            
+                               </div>
+                             
+                           </a>
+
+                        </div>
+
+                        <div class="top-stories-continued video-stories-continued d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-7">
+
+                                <img src="{% static 'PHOTOS/rice.jpg' %}" alt="" class="video-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Exclusive</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african exclusive">"They want it in a museum!"-Rice reveals his most <br> treasured shirt. </h3>
+
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  5th August 2022</span>
+
+                               </div>
+                             
+                           </a>
+
+                        </div>
+                     
+                    
+                    </div>
+                        
+            </div>  
+
+            <!-- See more button -->
+
+            <div class="see-more-button">
+
+                <button class="see-more-btn"><a href="#">More</a></button>
+
+            </div>
+                  
+        </section>
+
+        <section class="premier-league" id="premier-league">
+
+            <div class="premier-league-container" id="premier-league-container">
+
+                <h3 class="premier-league-headline-text">Premier League</h3>
+
+            </div>
+
+            <div class="breaking-news-content d-grid">
+              
+                <div class="main-container main-container-1 premier-league-container-1 d-grid">
+
+                    <a href="#" class="article breaking-news-article breaking-news-article-1">
+
+                         <img src="{% static 'PHOTOS/perez.jpg' %}" alt="" class="breaking-news-image premier-league-image-1">
+
+                         <div class="article-text-container perez-btn">
+
+                             <div class="article-text">
+
+                                 <button class="chelsea-btn btn"><a href="#">Cristiano Ronaldo</a></button>
+
+                                 <button class="epl-btn btn"><a href="#">Real Madrid</a></button>
+
+                             </div>
+
+                         </div>
+
+                         <div class="breaking-news-text perez-text">
+
+                             <h3 class="chelsea-news text-header">WATCH : Perez dismisses Madrid fan's of <br> Ronaldo question.</h3>
+
+                         </div>
+
+                         <div class="article-text">
+
+                            <p class="article-description text-header-description">The Blancos chief has addressed the rumours linking the Manchester <br> United striker with a possible homecoming.</p>
+
+                        </div>
+
+                        <div class="article-icons perez-icons">
+
+                            <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                            <span><i class="ri-message-line news-icons"></i>  4</span>
+
+                            <span class="story-container premier-league-full-story">Full Story    <i class="ri-arrow-right-line"></i></span>
+                            
+                        </div>
+
+                    </a>
+
+                </div>
+
+                   <div class="main-container main-container-2 premier-league-container-2 d-grid">
+
+                        <a href="#" class="article breaking-news-article breaking-news-article-2 ">
+
+                             <img src="{% static 'PHOTOS/pulisic.jpg' %}" alt="" class="breaking-news-image premier-league-image-2">
+
+                             <div class="article-text-container">
+
+                                 <div class="african-text">
+
+                                     <button class="african-btn btn"><a href="#" class="african-stars-button african">C.Pulisic</a></button>
+
+                                 </div>
+
+                                 <h3 class="african-stars-text african">Christian Pulisic Salary, net-worth <br> & more.</h3>
+
+                             </div>
+
+                            <div class="african-icons">
+
+                                <span class="arsenal-boys"><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+                    
+                                
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="main-container main-container-3 premier-league-container-3">
+
+                        <a href="#" class="article breaking-news-article breaking-news-article-3">
+
+                             <img src="{% static 'PHOTOS/bernado and mahrez.jpg' %}" alt="" class="breaking-news-image">
+
+                             <div class="article-text-container">
+
+                                 <div class="article-text premier-league-click">
+
+                                     <button class="chelsea-btn btn"><a href="#">Manchester City</a></button>
+
+                                 </div>
+
+                             </div>
+
+                             <h3 class="african premier-league-text">Mahrez : Bernado is scared of me! </h3>
+                           
+                            <div class="article-icons arsenal-boys">
+
+                                <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                            </div>
+                          
+                        </a>
+
+                    </div>
+
+                    <div class="top-stories-continued-content premier-league-continued-content d-grid">
+
+                        <div class="top-stories-continued premier-league-00 d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-4">
+
+                                <img src="{% static 'PHOTOS/caf-1.jpg' %}" alt="" class="top-story-images epl-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">CAF Champions League</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african">What is the African  <br> super league? </h3>
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  3h</span>
+
+                               </div>
+                             
+                           </a>
+
+                        </div>
+
+                        <div class="top-stories-continued premier-league-continued premier-league-00 d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-5">
+
+                                <img src="{% static 'PHOTOS/caf-2.jpg' %}" alt="" class="top-story-images epl-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">CAF Champions Leauge</a></button>
+
+                                    </div>
+
+                                </div>
+                                
+                                <h3 class="african">CAF CL: Rivers United handed <br> Watanga,Kotoko play Rail Club. </h3>
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  3h</span>
+                                   
+                               </div>
+                             
+                           </a>
+
+                        </div>
+                    
+                        <div class="top-stories-continued premier-league-continued premier-league-00 d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-6">
+
+                                <img src="{% static 'PHOTOS/premier league.jpg' %}" alt="" class="top-story-images epl-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Premier League</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african">The premier league captains <br> stripped of the armband.</h3>
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  3h</span>
+                            
+                               </div>
+                             
+                           </a>
+
+                        </div>
+
+                        <div class="top-stories-continued premier-league-continued premier-league-00 d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-7">
+
+                                <img src="{% static 'PHOTOS/de-jong.jpg' %}" alt="" class="top-story-images epl-images">
+
+                                <div class="article-text-container de-jong-text">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Man united</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african de-jong-text">De Jong would have signed if  <br> Sir Alex was in charge. </h3>
+                              
+                               <div class="article-icons arsenal-boys de-jong-icons">
+
+                                   <span><i class="ri-time-line news-icons"></i>  6h</span>
+
+                                   <span><i class="ri-message-line news-icons"></i>  31</span>
+                                   
+                               </div>
+                             
+                           </a>
+
+                        </div>
+
+                        <div class="see-more-button see-more-button-1">
+
+                            <button class="see-more-btn"><a href="#">More</a></button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+        </section>
+
+        <!-- Newsletter section -->
+
+        <section class="newsletter-container" id="newsletter-container">
+
+            <div class="newsletter-details">
+
+                <div class="newsletter-image">
+                    
+                    <img src="{% static 'PHOTOS/newsletter-img.jpg' %}" alt="" class="newsletter-img">
+
+                </div>
+
+                <div class="newsletter-follow">
+
+                    <h2 class="newletter-headline">NXGN</h2>
+
+                    <p class="newsletter-paragraph">Wonder kids, rising ballers and the <br> <br> next generation of football elite.</p>
+
+                    <button><a href="#">FOLLOW US</a></button>
+
+                </div>
+
+            </div>
+
+            <section class="breaking-news section section-header">
+
+                <div class="breaking-news-container container d-grid">
+
+                    <div class="headline">
+
+                        <h3 class="headline-text">
+
+                            <span class="items-place">Transfers</span>
+
+                        </h3>
+
+                    </div>
+    
+                    <div class="breaking-news-content d-grid">
+                  
+                        <div class="main-container main-container-1 d-grid">
+
+                            <a href="#" class="article breaking-news-article breaking-news-article-1">
+
+                                 <img src="{% static 'PHOTOS/epl-stars.jpg' %}" alt="" class="breaking-news-image">
+
+                                 <div class="article-text-container">
+
+                                     <div class="article-text">
+
+                                         <button class="chelsea-btn btn"><a href="#">Premier League</a></button>
+
+                                         <button class="epl-btn btn"><a href="#">Arsenal</a></button>
+
+                                     </div>
+
+                                 </div>
+
+                                 <div class="breaking-news-text">
+
+                                     <h3 class="chelsea-news">All completed Premier league transfers in <br> summer 2022.</h3>
+
+                                 </div>
+
+                                 <div class="article-text">
+
+                                    <p class="article-description">Goal rounds up all of the completed Premier League transfers this <br> this season so far.</p>
+
+                                </div>
+
+                                <div class="article-icons">
+
+                                    <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                                    <span><i class="ri-message-line news-icons"></i>  85</span>
+
+                                    <span class="story-container">Full Story    <i class="ri-arrow-right-line"></i></span>
+                                    
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                        <div class="main-container main-container-2 d-grid">
+
+                            <a href="#" class="article breaking-news-article breaking-news-article-2">
+
+                                 <img src="{% static 'PHOTOS/fofana.jpg' %}" alt="" class="breaking-news-image">
+
+                                 <div class="article-text-container">
+
+                                     <div class="african-text">
+
+                                         <button class="african-btn btn"><a href="#" class="african-stars-button african">Chelsea</a></button>
+
+                                     </div>
+
+                                     <h3 class="african-stars-text african fofana-stuff">Chelsea "no where near" Fofana <br> asking price  <i class="ri-close-line fofana-icon"></i></h3>
+
+                                 </div>
+
+                                <div class="african-icons">
+
+                                    <span class="arsenal-boys"><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+                                    
+                                
+                                </div>
+
+                            </a>
+
+                        </div>
+
+                        <div class="main-container main-container-3">
+
+                            <a href="#" class="article breaking-news-article breaking-news-article-3">
+
+                                 <img src="{% static 'PHOTOS/bundesliga.jpg' %}" alt="" class="breaking-news-image">
+
+                                 <div class="article-text-container">
+
+                                     <div class="article-text">
+
+                                         <button class="chelsea-btn btn"><a href="#">Bundesliga</a></button>
+
+                                     </div>
+
+                                 </div>
+
+                                 <h3 class="african">All completed bundesliga <br> transfers in summer 2022. </h3>
+                               
+                                <div class="article-icons arsenal-boys">
+
+                                    <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                                    <span><i class="ri-message-line news-icons"></i>  7</span>
+                                    
+                                </div>
+                              
+                            </a>
+
+                        <div class="top-stories-continued-content d-grid">
+
+                            <div class="top-stories-continued d-grid">
+
+                                <a href="#" class="article-wrapper breaking-news-article breaking-news-article-4">
+
+                                    <img src="{% static 'PHOTOS/raheem-sterling.jpg' %}" alt="" class="top-story-images">
+
+                                    <div class="article-text-container">
+
+                                        <div class="article-text">
+
+                                            <button class="chelsea-btn btn"><a href="#">R. Sterling</a></button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <h3 class="african"> "I couldn't waste time" - Why <br> Sterling left Man City</h3>
+                                  
+                                   <div class="article-icons arsenal-boys">
+
+                                       <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                                       <span><i class="ri-message-line news-icons"></i>  10</span>
+
+                                   </div>
+                                 
+                               </a>
+
+                            </div>
+
+                            <div class="top-stories-continued d-grid">
+
+                                <a href="#" class="article-wrapper breaking-news-article breaking-news-article-5">
+
+                                    <img src="{% static 'PHOTOS/mari.jpg' %}" alt="" class="top-story-images">
+
+                                    <div class="article-text-container">
+
+                                        <div class="article-text">
+
+                                            <button class="chelsea-btn btn"><a href="#">Arsenal</a></button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <h3 class="african">Mari Leaves Arsenal on loan as <br> clear-out continues. </h3>
+                                  
+                                   <div class="article-icons arsenal-boys">
+
+                                       <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                                       <span><i class="ri-message-line news-icons"></i>  3</span>
+                                       
+                                   </div>
+                                 
+                               </a>
+
+                            </div>
+                        
+                            <div class="top-stories-continued d-grid">
+
+                                <a href="#" class="article-wrapper breaking-news-article breaking-news-article-6">
+
+                                    <img src="{% static 'PHOTOS/serie-a.jpg' %}" alt="" class="top-story-images">
+
+                                    <div class="article-text-container">
+
+                                        <div class="article-text">
+
+                                            <button class="chelsea-btn btn"><a href="#">Serie A</a></button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <h3 class="african">How the world's best league <br> became the Serie B of Europe.</h3>
+                                  
+                                   <div class="article-icons arsenal-boys">
+
+                                       <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                                       <span><i class="ri-message-line news-icons"></i>  17</span>
+                                
+                                   </div>
+                                 
+                               </a>
+
+                            </div>
+
+                            <div class="top-stories-continued d-grid">
+
+                                <a href="#" class="article-wrapper breaking-news-article breaking-news-article-7">
+
+                                    <img src="{% static 'PHOTOS/lakaka.jpg' %}" alt="" class="top-story-images">
+
+                                    <div class="article-text-container">
+
+                                        <div class="article-text">
+
+                                            <button class="chelsea-btn btn"><a href="#">Serie A</a></button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <h3 class="african">All completed Serie A transfers in <br> summer 2022. </h3>
+                                  
+                                   <div class="article-icons arsenal-boys">
+
+                                       <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                                       <span><i class="ri-message-line news-icons"></i>  2</span>
+                                       
+                                   </div>
+                                 
+                               </a>
+
+                            </div>
+
+                            <div class="top-stories-continued d-grid">
+
+                                <a href="#" class="article-wrapper breaking-news-article breaking-news-article-8">
+
+                                    <img src="{% static 'PHOTOS/nunez.jpg' %}" alt="" class="top-story-images">
+
+                                    <div class="article-text-container">
+
+                                        <div class="article-text">
+
+                                            <button class="chelsea-btn btn"><a href="#">Serie A</a></button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <h3 class="african">Nunez, Diaz and Liverpool's South <br> American Soul. </h3>
+                                  
+                                   <div class="article-icons arsenal-boys">
+
+                                       <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                                       <span><i class="ri-message-line news-icons"></i>  2</span>
+                                       
+                                   </div>
+                                 
+                               </a>
+
+                            </div>
+
+                            <div class="top-stories-continued container-9 d-grid">
+
+                                <a href="#" class="article breaking-news-article top-story-images  breaking-news-article-9">
+
+                                    <img src="{% static 'PHOTOS/frenkie.jpg' %}" alt="" class="top-story-images">
+
+                                    <div class="article-text-container">
+
+                                        <div class="article-text">
+
+                                            <button class="chelsea-btn btn"><a href="#">Manchester United</a></button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <h3 class="african">Man Utd transfers LIVE: De Jong <br> saga  rolls on.</h3>
+                                  
+                                   <div class="article-icons arsenal-boys">
+
+                                       <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                                       <span><i class="ri-message-line news-icons"></i>  2</span>
+                                        
+                                   </div>
+                                 
+                               </a>
+
+                            </div>
+                        
+                        </div> 
+                       
+                    </div>
+
+                </div>
+
+                <div class="see-more-button see-more-button-1 see-more-button-2">
+
+                    <button class="see-more-btn"><a href="#">More</a></button>
+
+                </div>
+
+            </section>
+
+        <section class="breaking-news section section-header">
+
+            <div class="breaking-news-container container d-grid">
+
+                <div class="headline">
+
+                    <h3 class="headline-text">
+
+                        <span class="items-place">Primera Division</span>
+
+                    </h3>
+
+                </div>
+ 
+                <div class="breaking-news-content d-grid">
+              
+                    <div class="main-container main-container-1 d-grid">
+
+                        <a href="#" class="article breaking-news-article breaking-news-article-1">
+
+                             <img src="{% static 'PHOTOS/barca.jpg' %}" alt="" class="breaking-news-image">
+
+                             <div class="article-text-container">
+
+                                 <div class="article-text">
+
+                                     <button class="chelsea-btn btn"><a href="#">Betting</a></button>
+
+                                     <button class="epl-btn btn"><a href="#">Barcelona vs Rayo Vallecano</a></button>
+
+                                 </div>
+
+                             </div>
+
+                             <div class="breaking-news-text">
+
+                                 <h3 class="chelsea-news">Barcelona to get off to a winning start <br> against Rayo Vallecano.</h3>
+
+                             </div>
+
+                             <div class="article-text">
+
+                                <p class="article-description">The catalans are hoping to get on to a winning start in La Liga but their <br> but their fire power could be a little bit dented for the first weekend.</p>
+
+                            </div>
+
+                            <div class="article-icons">
+
+                                <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                                <span><i class="ri-message-line news-icons"></i>  19</span>
+
+                                <span class="story-container">Full Story    <i class="ri-arrow-right-line"></i></span>
+                                
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <div class="main-container main-container-2 d-grid">
+
+                        <a href="#" class="article breaking-news-article breaking-news-article-2">
+
+                             <img src="{% static 'PHOTOS/barca-players.jpg' %}" alt="" class="breaking-news-image">
+
+                             <div class="article-text-container">
+
+                                 <div class="african-text">
+
+                                     <button class="african-btn btn"><a href="#" class="african-stars-button african">African All Stars</a></button>
+
+                                 </div>
+
+                                 <h3 class="african-stars-text african">Barca revival "good for world <br> football." - Perez</h3>
+
+                             </div>
+
+                            <div class="african-icons">
+
+                                <span class="arsenal-boys"><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+                    
+                                
+                            </div>
+
+                        </a>
+
+                    </div> 
+
+                    <div class="main-container main-container-3">
+
+                        <a href="#" class="article breaking-news-article breaking-news-article-3">
+
+                             <img src="{% static 'PHOTOS/screaming-guys.jpg' %}" alt="" class="breaking-news-image">
+
+                             <div class="article-text-container">
+
+                                 <div class="article-text">
+
+                                     <button class="chelsea-btn btn"><a href="#">Manchester United</a></button>
+
+                                 </div>
+
+                             </div>
+
+                             <h3 class="african">Chickens, beach balls & 10  <br> memorable fan protests. </h3>
+                           
+                            <div class="article-icons arsenal-boys">
+
+                                <span><i class="ri-time-line news-icons"></i>  11 Aug 2022</span>
+
+                                <span><i class="ri-message-line news-icons"></i>  1</span>
+                                
+                            </div>
+                          
+                        </a>
+
+                    <div class="top-stories-continued-content d-grid">
+
+                        <div class="top-stories-continued d-grid">
+
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-4">
+
+                                <img src="{% static 'PHOTOS/benzi.jpg' %}" alt="" class="top-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Winners & losers</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african">Let's just give the ballon d'or <br> to Benzema right now. </h3>
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  10 Aug 2022</span>
+
+                               </div>
+                             
+                           </a>
+
+                        </div>
+
+                        <div class="top-stories-continued d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-5">
+
+                                <img src="{% static 'PHOTOS/de--jong.jpg' %}" alt="" class="top-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Barcelona</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african">WATCH:Barca fans heckle De <br> Jong over salary. </h3>
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  10 Aug 2022</span>
+                                   
+                               </div>
+                             
+                           </a>
+
+                        </div>
+                    
+                        <div class="top-stories-continued d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-6">
+
+                                <img src="{% static 'PHOTOS/silvy.jpg' %}" alt="" class="top-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Manchester City</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african">Aguero: Bernado would be key for <br> barca.</h3>
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  10 Aug 2022</span>
+                            
+                               </div>
+                             
+                           </a>
+
+                        </div>
+
+                        <div class="top-stories-continued d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-7">
+
+                                <img src="{% static 'PHOTOS/pino.jpg' %}" alt="" class="top-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Arsenal</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african">Arsenal interested $45m-rated <br> Pino. </h3>
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  10 Aug 2022</span>
+
+                                   <span><i class="ri-message-line news-icons"></i>  17</span>
+                                   
+                               </div>
+                             
+                           </a>
+
+                        </div>
+
+                        <div class="top-stories-continued d-grid">
+
+                            <a href="#" class="article-wrapper breaking-news-article breaking-news-article-8">
+
+
+                                <img src="{% static 'PHOTOS/kessie.jpg' %}" alt="" class="top-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Transfers</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african">Transfer news and rumors:  <br> August 10. </h3>
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  10 Aug 2022</span>
+
+                                   <span><i class="ri-message-line news-icons"></i>  34</span>
+                                   
+                               </div>
+                             
+                           </a>
+
+                        </div>
+
+                        <div class="top-stories-continued container-9 d-grid">
+
+                            <a href="#" class="article breaking-news-article top-story-images  breaking-news-article-9">
+
+                                <img src="{% static 'PHOTOS/memfish.jpg' %}" alt="" class="top-story-images">
+
+                                <div class="article-text-container">
+
+                                    <div class="article-text">
+
+                                        <button class="chelsea-btn btn"><a href="#">Barcelona</a></button>
+
+                                    </div>
+
+                                </div>
+
+                                <h3 class="african">Depay negotiating Barca exit <br> amid Juve interest. </h3>
+                              
+                               <div class="article-icons arsenal-boys">
+
+                                   <span><i class="ri-time-line news-icons"></i>  10 Aug 2022</span>
+
+                                   <span><i class="ri-message-line news-icons"></i>  8</span>
+                                    
+                               </div>
+                             
+                           </a>
+
+                        </div>
+                    
+                    </div> 
+                   
+                </div>
+
+            </div>
+
+            <!-- See more button -->
+
+            <div class="see-more-button see-more-button-1 see-more-button-2">
+
+                <button class="see-more-btn"><a href="#">More</a></button>
+
+            </div>
+
+        </section>
+
+    <section class="breaking-news section section-header">
+
+        <div class="breaking-news-container container d-grid">
+
+            <div class="headline">
+
+                <h3 class="headline-text">
+                    
+                    <span class="items-place">UEFA Champions League</span>
+
+                </h3>
+
+            </div>
+            
+            <div class="breaking-news-content d-grid">
+          
+                <div class="main-container main-container-1 d-grid">
+
+                    <a href="#" class="article breaking-news-article breaking-news-article-1">
+
+                         <img src="{% static 'PHOTOS/manu.jpg' %}" alt="" class="breaking-news-image">
+
+                         <div class="article-text-container">
+
+                             <div class="article-text">
+
+                                 <button class="chelsea-btn btn"><a href="#">Man United</a></button>
+
+                                 <button class="epl-btn btn"><a href="#">Transfers</a></button>
+
+                             </div>
+
+                         </div>
+
+                         <div class="breaking-news-text">
+
+                             <h3 class="chelsea-news">Man United-linked Gakpo responds to <br> transfer talk.</h3>
+
+                         </div>
+
+                         <div class="article-text">
+
+                            <p class="article-description">The dutch winger has been tipped to complete a move to Old Trafford <br> before the summer window closes.</p>
+
+                        </div>
+
+                        <div class="article-icons">
+
+                            <span><i class="ri-time-line news-icons"></i>  10 Aug 2022</span>
+
+                            <span><i class="ri-message-line news-icons"></i>  5</span>
+
+                            <span class="story-container">Full Story    <i class="ri-arrow-right-line"></i></span>
+                            
+                        </div>
+
+                    </a>
+
+                </div>   
+
+                <div class="main-container main-container-2 d-grid">
+
+                    <a href="#" class="article breaking-news-article breaking-news-article-2">
+
+                         <img src="{% static 'PHOTOS/rude-boy.jpg' %}" alt="" class="breaking-news-image">
+
+                         <div class="article-text-container">
+
+                             <div class="african-text">
+
+                                 <button class="african-btn btn"><a href="#" class="african-stars-button african">Premier League</a></button>
+
+                             </div>
+
+                             <h3 class="african-stars-text african">Football on UK TV: Matches to <br> watch & stream live.</h3>
+
+                         </div>
+
+                        <div class="african-icons">
+
+                            <span class="arsenal-boys"><i class="ri-time-line news-icons"></i>  08 Aug 2022</span>
+                
+                            
+                        </div>
+
+                    </a>
+
+                </div>  
+
+                <div class="main-container main-container-3">
+
+
+                    <a href="#" class="article breaking-news-article breaking-news-article-3">
+
+                         <img src="{% static 'PHOTOS/pep.jpg' %}" alt="" class="breaking-news-image">
+
+                         <div class="article-text-container">
+
+                             <div class="article-text">
+
+                                 <button class="chelsea-btn btn"><a href="#">Guardiola</a></button>
+
+                             </div>
+
+                         </div>
+
+                         <h3 class="african">Pep: I'm not at Man City to win the  <br> Champions League! </h3>
+                       
+                        <div class="article-icons arsenal-boys">
+
+                            <span><i class="ri-time-line news-icons"></i>  07 Aug 2022</span>
+
+                            <span><i class="ri-message-line news-icons"></i>  27</span>
+                            
+                        </div>
+                      
+                    </a>
+
+                <div class="top-stories-continued-content d-grid">
+
+                    <div class="top-stories-continued d-grid">
+
+                        <a href="#" class="article-wrapper breaking-news-article breaking-news-article-4">
+
+                            <img src="{% static 'PHOTOS/saka.jpg' %}" alt="" class="top-story-images">
+
+                            <div class="article-text-container">
+
+                                <div class="article-text">
+
+                                    <button class="chelsea-btn btn"><a href="#">Premier League</a></button>
+
+                                </div>
+
+                            </div>
+
+                            <h3 class="african">New 2022-2023 football kits:Top <br> teams jerseys revealed. </h3>
+
+                          
+                           <div class="article-icons arsenal-boys">
+
+                               <span><i class="ri-time-line news-icons"></i>  06 Aug 2022</span>
+
+                           </div>
+                         
+                       </a>
+
+                    </div>
+
+                    <div class="top-stories-continued d-grid">
+
+                        <a href="#" class="article-wrapper breaking-news-article breaking-news-article-5">
+
+                            <img src="{% static 'PHOTOS/ba.jpg' %}" alt="" class="top-story-images">
+
+                            <div class="article-text-container">
+
+                                <div class="article-text">
+
+                                    <button class="chelsea-btn btn"><a href="#">African All Stars</a></button>
+
+                                </div>
+
+                            </div>
+
+                            <h3 class="african">How VISA hitch denied Ba Man <br> United coaching job. </h3>
+                          
+                           <div class="article-icons arsenal-boys">
+
+                               <span><i class="ri-time-line news-icons"></i>  05 Aug 2022</span>
+                               
+                           </div>
+                         
+                       </a>
+
+                    </div>
+                
+                    <div class="top-stories-continued d-grid">
+
+                        <a href="#" class="article-wrapper breaking-news-article breaking-news-article-6">
+
+                            <img src="{% static 'PHOTOS/kwabena.jpg' %}" alt="" class="top-story-images">
+
+                            <div class="article-text-container">
+
+                                <div class="article-text">
+
+                                    <button class="chelsea-btn btn"><a href="#">African All Stars</a></button>
+
+                                </div>
+
+                            </div>
+
+                            <h3 class="african">Kwabena rescues esiti's Qarabag <br> from defeat.</h3>
+                          
+                           <div class="article-icons arsenal-boys">
+
+                               <span><i class="ri-time-line news-icons"></i>  03 Aug 2022</span>
+                        
+                           </div>
+                         
+                       </a>
+
+                    </div>
+
+                    <div class="top-stories-continued d-grid">
+
+                        <a href="#" class="article-wrapper breaking-news-article breaking-news-article-7">
+
+                            <img src="{% static 'PHOTOS/tek.jpg' %}" alt="" class="top-story-images">
+
+                            <div class="article-text-container">
+
+                                <div class="article-text">
+
+                                    <button class="chelsea-btn btn"><a href="#">African All Stars</a></button>
+
+                                </div>
+
+                            </div>
+
+                            <h3 class="african">Tekpetey scores but Ludogorets <br> suffer Zagreb defeat. </h3>
+                          
+                           <div class="article-icons arsenal-boys">
+
+                               <span><i class="ri-time-line news-icons"></i>  31 July 2022</span>
+
+                               <span><i class="ri-message-line news-icons"></i>  32</span>
+                               
+                           </div>
+                         
+                       </a>
+
+                    </div>
+
+                    <div class="top-stories-continued d-grid">
+
+                        <a href="#" class="article-wrapper breaking-news-article breaking-news-article-8">
+                            
+                            <img src="{% static 'PHOTOS/bennie.jpg' %}" alt="" class="top-story-images">
+
+                            <div class="article-text-container">
+
+                                <div class="article-text">
+
+                                    <button class="chelsea-btn btn"><a href="#">African All Stars</a></button>
+
+                                </div>
+
+                            </div>
+
+                            <h3 class="african">McCarthy expects "revived" United  <br> to challenge on all fronts. </h3>
+
+                          
+                           <div class="article-icons arsenal-boys">
+
+                               <span><i class="ri-time-line news-icons"></i>  31 July 2022</span>
+
+                               <span><i class="ri-message-line news-icons"></i>  23</span>
+                               
+                           </div>
+                         
+                       </a>
+
+                    </div>
+
+                    <div class="top-stories-continued container-9 d-grid">
+
+                        <a href="#" class="article breaking-news-article top-story-images  breaking-news-article-9">
+
+                            <img src="{% static 'PHOTOS/bennie-2.jpg' %}" alt="" class="top-story-images">
+
+                            <div class="article-text-container">
+
+                                <div class="article-text">
+
+                                    <button class="chelsea-btn btn"><a href="#">African Stars</a></button>
+
+                                </div>
+
+                            </div>
+
+                            <h3 class="african">Fans:McCarthy will teach Ronaldo <br> to play No 9. </h3>
+
+                          
+                           <div class="article-icons arsenal-boys">
+
+                               <span><i class="ri-time-line news-icons"></i>  30 July 2022</span>
+
+                               <span><i class="ri-message-line news-icons"></i>  2</span>
+                                
+                           </div>
+                         
+                       </a>
+
+                    </div>
+                
+                </div> 
+               
+            </div>
+
+        </div>
+
+        <!-- see more button -->
+        
+        <div class="see-more-button see-more-button-1 see-more-button-2">
+
+            <button class="see-more-btn"><a href="#">More</a></button>
+
+        </div>
+
+    </section>
+
+    <!-- Footer section -->
+
+    <footer class="footer-container" id="footer-container">
+
+        <div class="footer-stuff">
+
+            <div class="footer-image">
+
+                <img src="{% static 'PHOTOS/logo.jpg' %}" alt="" class="goal-logo">
+
+            </div>
+
+            <nav class="footer-details">
+
+                <ul>
+
+                    <li><a href="#">Contact Us</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Terms of Use </a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Privacy settings</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Careers</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Goal app (Android)</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Goal App (IOS)</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Goal Live</a></li>
+
+                    <span class="line">|</span>
+
+                    <!-- Theme toggle button -->
+
+                    <li>
+
+                        <button class="btn place-items-center" id="theme-toggle-btn">
+
+                            <i class="ri-sun-line sun-icon"></i>
+
+                            <i class="ri-moon-line moon-icon"></i>
+
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <!-- Copyright section -->
+
+            <h5 class="nigeria">Nigeria</h5>
+
+            <div class="copyright-text">
+
+                <h6 class="copy">Copyright &copy; 2022 Goal All rights reserved. The information contained in Goal may not be published, broadcast, rewritten or redistribited without the prior written authority from Goal.</h6>
+
+            </div>
+
+        </div>
+        <style>
+            .chat-room{
+                position: fixed;
+                bottom: 8rem;
+                right: 0rem;
+                text-align: center;
+            
+            }
+         
+            .chat-room h2{
+                font-family: myFont;
+                font-size: 1.2rem;
+                color: rgb(248, 153, 118);
+            }
+            @font-face {
+                font-family:myFont;
+                src: url('static/FONTS/google2.ttf');
+            }
+            .chat-room i{
+                font-size: 3rem;
+                color:rgb(248, 153, 118);
+            }
+            
+        
+        </style>
+             <h4>Goal Room</h4>
+            <div class="chat-room">
+                <div class="chat-room-wrapper">
+                    <h2>Goal Chat Room</h2>
+                    <a href="room"><i class='chat-icon bx bxs-message-rounded-dots'></i></a>
+                </div>
+            </div>
+            
+      
+            <a href="#" class="to-top" id="to-top"><i class="ri-arrow-up-s-line to-top-button"></i></a>
+
+    </footer>
+
+    <script>
+        // Automated greeting text
+
+window.addEventListener("DOMContentLoaded", function(){
+
+let time = new Date ()
+
+let greetingElement = selectElement("#greeting")
+
+
+const greet = document.querySelector('.greet')
+console.log(greet)
+
+if(time.getHours() < 12){
+
+    greeting = `good morning....`
+}
+
+else if(time.getHours() >= 12 && time.getHours() < 18){
+
+    greeting = `good afternoon....`
+}
+
+else{
+
+    greeting = `good evening....`
+
+}
+
+greetingElement.innerHTML = greeting;
+
+});
+    </script>
+
+    <!-- Link to JavaScript -->
+
+    <script src="{% static 'script.js' %}"></script>
+
+</body>
+
+</html>

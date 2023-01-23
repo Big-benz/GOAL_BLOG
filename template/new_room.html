@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body background="red">
+    <style>
+        body{
+            background:linear-gradient(rgba(51, 50, 50, 0.5),rgba(51, 51, 51, 0.5)),url("/static/PHOTOS/pexels-markus-spiske-114296.jpg");
+            background-position: center;
+            background-size: cover;
+            width: 90%;
+            height: 90vh;
+        }
+        form{
+            position: absolute;
+            left: 33%;
+            top: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            width: 30rem;
+            height: 24rem;
+            background-color:rgb(31, 30, 30);;
+            border-radius: 1rem;
+            border: 4px solid rgb(248, 153, 118);
+            
+        }
+        input:focus{
+            outline: none;
+        }
+        input{
+            width: 20rem;
+            height: 1.6rem;
+            border-radius:.5rem;
+            border: none;
+        }
+        h3{
+            color: white;
+        }
+
+
+    </style>
+
+    <form action="checkroom" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="username" id="" placeholder="Enter Username" value="{{user.username}}">
+        {% if user.is_authenticated %}
+        <h3>Enter Room Name</h3>
+        <input type="text" name="room" placeholder="Enter Room">
+      
+        <button type="submit">Enter Room</button>
+        {% else %}
+        <h3>Sign in to start using Goal Chat Room...</h3>
+
+        {% endif %}
+    </form>
+</body>
+</html>

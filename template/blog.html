@@ -1,0 +1,1463 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to CSS -->
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- Link to boxicon NPM -->
+
+    <link rel="stylesheet"
+
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- Link to RemixIcons NPM -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Title -->
+
+    <title>Goal.com</title>
+
+</head>
+
+<!-- Header and body item of page -->
+
+<body  class="body" id="body">
+
+   <header class="header" id="header">
+
+        <div class="header-menu">
+
+            <a href="#" class="header-menu-items">
+
+                <!-- Logo -->
+
+                <div class="logo">
+
+                    <img src="{% static 'PHOTOS/Goal logo.jpg' %}" alt="" class="logo-img">
+
+                </div>
+
+                <!-- Navigation bar -->
+
+                <div class="list-items">
+
+                    <nav class="nav-bar">
+
+                        <ul>
+
+                            <li><a href="#">Live Scores</a></li>
+
+                            <li><a href="#">Breaking News</a></li>
+
+                            <li><a href="#">Transfers</a></li>
+
+                            <li><a href="#" id="culture" class="culture">Cultures <i class='bx bxs-down-arrow'></i></a></li>
+
+                            <li><a href="#" id="premier" class="premier">Premier League</a> <i class='bx bxs-down-arrow'></i>
+
+                            <li><a href="#" id="laliga" class="laliga">La Liga</a> <i class='bx bxs-down-arrow'></i></li>
+
+                            <li><a href="#" id="afcon" class="afcon">AFCON</a>  <i class='bx bxs-down-arrow'></i></li>
+
+                            <li><a href="#">GOALSTUDIO</a></li>
+
+                            <li><a href="#" id="more">More</a> <i class='bx bxs-down-arrow'></i></li>
+                           
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <!-- Search box and close item container -->
+
+                <div class="icons">
+
+                    <i class='bx bx-search' class="search-icon" id="search-icon"></i>
+
+                    <i class='bx bx-dots-vertical-rounded' class="settings" id="settings"></i>
+
+                </div>
+
+                <!-- Setting portion -->
+
+                <div class="settings-tab" id="settings-tab">
+
+                    <nav class="settings-nav">
+
+                        <ul>
+
+                            <li><a href="#"><i class="ri-global-line"></i>  language</a></li>
+
+                            <li><a href="#"><i class="ri-settings-3-line"></i>  Settings</a></li>
+
+                            <li><a href="#"><i class="ri-question-line"></i>  Help</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <!-- Drop down menus -->
+             
+                <div class="inside-navbar" id="inside-navbar">
+
+                    <nav class="nav nav-container1">
+
+                        <ul>
+
+                            <li class="disc"><a href="#" >DISCOVER</a></li>
+
+                            <li><a href="#">Lgendary teams</a></li>
+
+                            <li><a href="#">forgotten footballers</a></li>
+
+                            <li><a href="#">features</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <nav class="nav nav-container2">
+
+                        <ul>
+
+                            <li class="disc"><a href="#" >NXGN</a></li>
+
+                            <li><a href="#">class of 2021</a></li>
+
+                            <li><a href="#">class of 2020</a></li>
+
+                            <li><a href="#">class of 2019</a></li>
+
+                            <li><a href="#">class of 2018</a></li>
+
+                            <li><a href="#">class of 2017</a></li>
+
+                            <li><a href="#">class of 2016</a></li>
+
+                            <li><a href="#">Latest News and profiles</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <nav class="nav nav-container3">
+
+                        <ul>
+
+                            <li class="disc"><a href="#" >Goal 50</a></li>
+
+                            <li><a href="#">2019-20</a></li>
+
+                            <li><a href="#">2018-19</a></li>
+
+                            <li><a href="#">2017-18</a></li>
+
+                            <li><a href="#">2016-17</a></li>
+
+                            <li><a href="#">2017-18</a></li>
+
+                            <li><a href="#">Latest news and specials</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="laliga-container" id="laliga-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">Info</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">Breaking News</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="team-box edit">
+
+                        <li><a href="#" class="teams1">Teams</a></li>
+
+                        <li><a href="#">Barcelona</a></li>
+
+                        <li><a href="#">Real Madrid</a></li>
+
+                        <li><a href="#">Atletico Madrid</a></li>
+
+                        <li><a href="#">Sevilla</a></li>
+
+                        <li><a href="#">Valencia</a></li>
+
+                        <li><a href="#">Others</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="players">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">Players</a></li>
+
+                        <li><a href="#">Karim Benzema</a></li>
+
+                        <li><a href="#">Gerrard Pique</a></li>
+
+                        <li><a href="#">Luka Modric</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+        </div>
+
+        <div class="afcon-container" id="afcon-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">Info</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">Breaking News</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="team-box edit">
+
+                        <li><a href="#" class="teams1">Teams</a></li>
+
+                        <li><a href="#">Nigeria</a></li>
+
+                        <li><a href="#">Senegal</a></li>
+
+                        <li><a href="#">Cameroon</a></li>
+
+                        <li><a href="#">Egypt</a></li>
+
+                        <li><a href="#">Ivory Coast</a></li>
+
+                        <li><a href="#">Others</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="players">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">Players</a></li>
+
+                        <li><a href="#">Mohammed Salah</a></li>
+
+                        <li><a href="#">Sadio Mane</a></li>
+
+                        <li><a href="#">Ahmed Musa</a></li>
+
+                        <li><a href="#">Kalidou Koulibaly</a></li>
+
+                        <li><a href="#">Riyad Mahrez</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+        </div>
+
+        <div class="epl-container" id="epl-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">Info</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">Breaking News</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="team-box edit">
+
+                        <li><a href="#" class="teams1">Teams</a></li>
+
+                        <li><a href="#">Man United</a></li>
+
+                        <li><a href="#">Chelsea</a></li>
+
+                        <li><a href="#">Man City</a></li>
+
+                        <li><a href="#">Liverpool</a></li>
+
+                        <li><a href="#">Arsenal</a></li>
+
+                        <li><a href="#">others</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="players">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">Players</a></li>
+
+                        <li><a href="#">Bruno fernandes</a></li>
+
+                        <li><a href="#">Kevin de bruyne</a></li>
+
+                        <li><a href="#">Mohammed salah</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+        </div>
+
+        <div class="more-container" id="more-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">NPFL</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">News</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">ENYIMBA</a></li>
+                        
+                        <li><a href="#">AWKA UNITED</a></li>
+
+                        <li><a href="#">LOBI STARS</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <div class="info">
+
+                    <nav>
+
+                        <ul class="team-box edit">
+
+                            <li><a href="#"  class="teams1">WORLD CUP QUALIFIERS AFRICA</a></li>
+
+                            <li><a href="#">Tables</a></li>
+
+                            <li><a href="#">News</a></li>
+
+                            <li><a href="#">Fixtures & Results</a></li>
+
+                            <li><a href="#">NIGERIA</a></li>
+
+                            <li><a href="#">GHANA</a></li>
+
+                            <li><a href="#">SENEGAL</a></li>
+
+                        </ul>
+
+                    </nav>
+                
+            </div>
+
+            <div class="players serie-A">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">SERIE A</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">News</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">INTER MILAN</a></li>
+
+                        <li><a href="#">JUVENTUS</a></li>
+
+                        <li><a href="#">AC MILAN</a></li>
+
+                    </ul>
+                    
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="bundesliga edit">
+
+                        <li><a href="#" class="teams1">BUNDESLIGA</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">News</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">BAYERN MUNICH</a></li>
+
+                        <li><a href="#">DORTMUND</a></li>
+
+                        <li><a href="#">LEIPZIG</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+     
+   </header>
+   <!-- <style>
+    section{
+        position: absolute;
+        top:7rem;
+        left: 3rem;
+    }
+    .topic-wrapper h2{
+        color: white;
+        font-family:myFont;
+        font-size: 1.5rem;
+    }
+
+    @font-face{
+    font-family: myFont;
+    src:url(FONTS/google1.ttf);
+    }
+    .write-up{
+        font-family: myFont;
+        position: ab;
+        text-align: left;
+        letter-spacing: 3px;
+        font-size: 1rem;
+
+    }
+    .image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 0;
+    }
+
+    .topic{
+        position: absolute;
+        left: 8rem;
+        padding: 2rem;
+        gap: 2rem;
+        width: 60rem;
+        border-radius: .3rem;
+        background-color:rgb(31, 30, 30);
+        box-shadow: 2px 2px 2px 2px rgb(68, 67, 67);
+    }
+    .date-time{
+        padding: .6rem;
+    }
+    footer{
+        position: absolute;
+        bottom: -160rem;
+    }
+
+   </style>
+
+   <section class="main_topic">
+    <a href="blog">
+      
+        <div class="topic">
+            <div class="topic-wrapper">
+                <h2>{{blogs.title}}</h2>
+            </div>
+            <div class="date-time">
+                <h4>{{blogs.date}}</h4>
+            </div>
+            <div class="image">
+                <img src="{{blogs.image.url}}" alt="">
+            </div>
+            <div class="write-up">
+                <p>{{blogs.write_up}}</p>
+            </div>
+         
+     
+        
+        </div>
+     
+
+    </a>
+
+   
+   </section> -->
+
+   {% load static %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link to CSS -->
+
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- Link to boxicon NPM -->
+
+    <link rel="stylesheet"
+
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    
+    <!-- Link to RemixIcons NPM -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- Title -->
+
+    <title>Goal.com</title>
+
+</head>
+
+<!-- Header and body item of page -->
+
+<body  class="body" id="body">
+
+   <header class="header" id="header">
+
+        <div class="header-menu">
+
+            <a href="#" class="header-menu-items">
+
+                <!-- Logo -->
+
+                <div class="logo">
+
+                    <img src="{% static 'PHOTOS/Goal logo.jpg' %}" alt="" class="logo-img">
+
+                </div>
+
+                <!-- Navigation bar -->
+
+                <div class="list-items">
+
+                    <nav class="nav-bar">
+
+                        <ul>
+
+                            <li><a href="#">Live Scores</a></li>
+
+                            <li><a href="#">Breaking News</a></li>
+
+                            <li><a href="#">Transfers</a></li>
+
+                            <li><a href="#" id="culture" class="culture">Cultures <i class='bx bxs-down-arrow'></i></a></li>
+
+                            <li><a href="#" id="premier" class="premier">Premier League</a> <i class='bx bxs-down-arrow'></i>
+
+                            <li><a href="#" id="laliga" class="laliga">La Liga</a> <i class='bx bxs-down-arrow'></i></li>
+
+                            <li><a href="#" id="afcon" class="afcon">AFCON</a>  <i class='bx bxs-down-arrow'></i></li>
+
+                            <li><a href="#">GOALSTUDIO</a></li>
+
+                            <li><a href="#" id="more">More</a> <i class='bx bxs-down-arrow'></i></li>
+                           
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <!-- Search box and close item container -->
+
+                <div class="icons">
+
+                    <i class='bx bx-search' class="search-icon" id="search-icon"></i>
+
+                    <i class='bx bx-dots-vertical-rounded' class="settings" id="settings"></i>
+
+                </div>
+
+                <!-- Setting portion -->
+
+                <div class="settings-tab" id="settings-tab">
+
+                    <nav class="settings-nav">
+
+                        <ul>
+
+                            <li><a href="#"><i class="ri-global-line"></i>  language</a></li>
+
+                            <li><a href="#"><i class="ri-settings-3-line"></i>  Settings</a></li>
+
+                            <li><a href="#"><i class="ri-question-line"></i>  Help</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+                <!-- Drop down menus -->
+             
+                <div class="inside-navbar" id="inside-navbar">
+
+                    <nav class="nav nav-container1">
+
+                        <ul>
+
+                            <li class="disc"><a href="#" >DISCOVER</a></li>
+
+                            <li><a href="#">Lgendary teams</a></li>
+
+                            <li><a href="#">forgotten footballers</a></li>
+
+                            <li><a href="#">features</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <nav class="nav nav-container2">
+
+                        <ul>
+
+                            <li class="disc"><a href="#" >NXGN</a></li>
+
+                            <li><a href="#">class of 2021</a></li>
+
+                            <li><a href="#">class of 2020</a></li>
+
+                            <li><a href="#">class of 2019</a></li>
+
+                            <li><a href="#">class of 2018</a></li>
+
+                            <li><a href="#">class of 2017</a></li>
+
+                            <li><a href="#">class of 2016</a></li>
+
+                            <li><a href="#">Latest News and profiles</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                    <nav class="nav nav-container3">
+
+                        <ul>
+
+                            <li class="disc"><a href="#" >Goal 50</a></li>
+
+                            <li><a href="#">2019-20</a></li>
+
+                            <li><a href="#">2018-19</a></li>
+
+                            <li><a href="#">2017-18</a></li>
+
+                            <li><a href="#">2016-17</a></li>
+
+                            <li><a href="#">2017-18</a></li>
+
+                            <li><a href="#">Latest news and specials</a></li>
+
+                        </ul>
+
+                    </nav>
+
+                </div>
+
+            </a>
+
+        </div>
+
+        <div class="laliga-container" id="laliga-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">Info</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">Breaking News</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="team-box edit">
+
+                        <li><a href="#" class="teams1">Teams</a></li>
+
+                        <li><a href="#">Barcelona</a></li>
+
+                        <li><a href="#">Real Madrid</a></li>
+
+                        <li><a href="#">Atletico Madrid</a></li>
+
+                        <li><a href="#">Sevilla</a></li>
+
+                        <li><a href="#">Valencia</a></li>
+
+                        <li><a href="#">Others</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="players">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">Players</a></li>
+
+                        <li><a href="#">Karim Benzema</a></li>
+
+                        <li><a href="#">Gerrard Pique</a></li>
+
+                        <li><a href="#">Luka Modric</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+        </div>
+
+        <div class="afcon-container" id="afcon-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">Info</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">Breaking News</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="team-box edit">
+
+                        <li><a href="#" class="teams1">Teams</a></li>
+
+                        <li><a href="#">Nigeria</a></li>
+
+                        <li><a href="#">Senegal</a></li>
+
+                        <li><a href="#">Cameroon</a></li>
+
+                        <li><a href="#">Egypt</a></li>
+
+                        <li><a href="#">Ivory Coast</a></li>
+
+                        <li><a href="#">Others</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="players">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">Players</a></li>
+
+                        <li><a href="#">Mohammed Salah</a></li>
+
+                        <li><a href="#">Sadio Mane</a></li>
+
+                        <li><a href="#">Ahmed Musa</a></li>
+
+                        <li><a href="#">Kalidou Koulibaly</a></li>
+
+                        <li><a href="#">Riyad Mahrez</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+        </div>
+
+        <div class="epl-container" id="epl-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">Info</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">Breaking News</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="team-box edit">
+
+                        <li><a href="#" class="teams1">Teams</a></li>
+
+                        <li><a href="#">Man United</a></li>
+
+                        <li><a href="#">Chelsea</a></li>
+
+                        <li><a href="#">Man City</a></li>
+
+                        <li><a href="#">Liverpool</a></li>
+
+                        <li><a href="#">Arsenal</a></li>
+
+                        <li><a href="#">others</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="players">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">Players</a></li>
+
+                        <li><a href="#">Bruno fernandes</a></li>
+
+                        <li><a href="#">Kevin de bruyne</a></li>
+
+                        <li><a href="#">Mohammed salah</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+        </div>
+
+        <div class="more-container" id="more-container">
+
+            <div class="info">
+
+                <nav>
+
+                    <ul class="info-box edit">
+
+                        <li><a href="#"  class="teams1">NPFL</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">News</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">ENYIMBA</a></li>
+                        
+                        <li><a href="#">AWKA UNITED</a></li>
+
+                        <li><a href="#">LOBI STARS</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <div class="info">
+
+                    <nav>
+
+                        <ul class="team-box edit">
+
+                            <li><a href="#"  class="teams1">WORLD CUP QUALIFIERS AFRICA</a></li>
+
+                            <li><a href="#">Tables</a></li>
+
+                            <li><a href="#">News</a></li>
+
+                            <li><a href="#">Fixtures & Results</a></li>
+
+                            <li><a href="#">NIGERIA</a></li>
+
+                            <li><a href="#">GHANA</a></li>
+
+                            <li><a href="#">SENEGAL</a></li>
+
+                        </ul>
+
+                    </nav>
+                
+            </div>
+
+            <div class="players serie-A">
+
+                <nav>
+
+                    <ul class="players-box edit">
+
+                        <li class="disc"><a href="#"  class="teams1">SERIE A</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">News</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">INTER MILAN</a></li>
+
+                        <li><a href="#">JUVENTUS</a></li>
+
+                        <li><a href="#">AC MILAN</a></li>
+
+                    </ul>
+                    
+                </nav>
+                
+            </div>
+
+            <div class="teams">
+
+                <nav>
+
+                    <ul class="bundesliga edit">
+
+                        <li><a href="#" class="teams1">BUNDESLIGA</a></li>
+
+                        <li><a href="#">Tables</a></li>
+
+                        <li><a href="#">News</a></li>
+
+                        <li><a href="#">Fixtures & Results</a></li>
+
+                        <li><a href="#">BAYERN MUNICH</a></li>
+
+                        <li><a href="#">DORTMUND</a></li>
+
+                        <li><a href="#">LEIPZIG</a></li>
+
+                    </ul>
+
+                </nav>
+                
+            </div>
+     
+   </header>
+  
+   <!-- Search Container -->
+
+   <section class="search-bar" id="search-bar">
+
+        <div class="search-box-container" id="search-box-container">
+
+            <div class="search-box">
+
+                <span class="search-description">Find latest sports news....</span>
+
+                <form action="" class="form-box">
+
+                    <input type="text" class="search" placeholder="search sports news">
+
+                    <button class="btn search-btn"><a href="#"> <i class="ri-search-line" id="open-icon"></i></a></button>
+
+                </form>
+             
+            </div>
+
+            <!-- Close search container -->
+
+            <button class="btn close-icon" id="close-icon"> <i class="ri-close-line"></i></button>
+
+        </div>
+
+        <!--Top stories container-->
+
+        <section class="breaking-news section section-header" id="breaking-news">
+
+            <style>
+                :root{
+    --dark-color:rgb(32, 32, 32);
+    --background-dark-color: rgb(17, 16, 16);
+    --text-color:white;
+}
+
+.body.light-theme{
+    --dark-color:white;
+    --background-dark-color:rgba(224, 214, 214, 0.829);
+    --text-color:black;
+}
+                .main_topic{
+                    margin-top: 7rem;
+                }
+          
+                @font-face{
+                font-family: myFont;
+                src:url('static/FONTS/google1.ttf');
+                }
+                h2, 
+                h4, 
+                p{
+                    font-family: myFont;
+                    font-size: 1rem;
+                    color:var(--text-color);
+
+
+                }
+            
+                .image{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 2rem 0;
+                }
+            
+                .topic-wrapper{
+                    position: absolute;
+                    left: 8rem;
+                    padding: 2rem;
+                    gap: 2rem;
+                    width: 60rem;
+                    border-radius: .3rem;
+                    background-color:var(--background-dark-color);
+                    box-shadow: 2px 2px 2px 2px rgb(68, 67, 67);
+                }
+                .date-time{
+                    padding: .6rem;
+                }
+                .comment-section{
+                    position: relative;
+                    bottom: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    margin-top: 2rem;
+                
+                }
+                .comment-section input{
+                    height: 3rem;
+                }
+                .comment-btn{
+                    position: relative;
+                    bottom: 0rem;
+                    left: 40%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 8rem;
+                    height: 2rem;
+                }
+                footer{
+                    position: absolute;
+                    bottom: -160rem;
+                }
+       
+            
+               </style>
+            
+               <section class="main_topic">
+                <div class="topic-wrapper">
+            
+                  
+                        <div class="topic">
+                            <div class="topic-wrapper-header">
+                                <h2>{{blogs.title}}</h2>
+                            </div>
+                            <div class="date-time">
+                                <h4>{{blogs.date}}</h4>
+                            </div>
+                            <div class="image">
+                                <img src="{{blogs.image.url}}" alt="">
+                            </div>
+                            <div class="write-up">
+                                <p>{{blogs.write_up}}</p>
+                            </div>
+    
+                        
+                        </div>
+    
+                        
+                     
+                
+                    
+
+                    <h3>Leave a comment below</h3>
+
+                    <form action="" method="post">
+                        {% csrf_token %}  
+
+                        <input type="hidden" name="username" id="username" value="{{user.username}}">
+
+                        <input type="hidden" name="blog_id" id="blog_id" value="{{blogs.id}}">
+
+                        <input type="text" name="comment" id="comment" >
+
+                        <button type="submit">Comment</button>
+                    </form>
+
+                    <div id="getcomment">
+                        <!-- <div id="my-comments">
+                            <h3>{{user.username}}</h3>
+                            <p>Hey very nice article</p>
+                            <div class="like-unlike">
+                                <span class="like-btn">
+                                    <i class="ri-heart-line"></i>
+                                </span>
+                                <h5>
+                                    Reply...
+                                </h5>
+                            </div>
+                        </div> -->
+                    </div>
+                    
+
+
+                </div>
+            
+               
+               </section>
+
+               <script>
+                // function getComments(){
+                //     fetch('/getcomments/{{blog}}/')
+                //     .then(function(response){
+                //         let data = response.json()
+                //         return data
+                //     })
+                //     .then(function(data){
+                //         const commentContainer = document.getElementById('getcomment')
+
+                //         commentContainer.innerHTML = ''
+
+                //         data.comments.forEach(function(comment){
+                //             const myComments = `<div id="my-comments">
+                //             <h3>${user.username}</h3>
+                //             <p>${comment.comment}</p>
+                //             <div class="like-unlike">
+                //                 <span class="like-btn">
+                //                     <i class="ri-heart-line"></i>
+                //                 </span>
+                //                 <h5>
+                //                     Reply...
+                //                 </h5>
+                //             </div>
+                //         </div>`
+
+                //         commentContainer.innerHTML += myComments
+                //         })
+                      
+                //     })
+                // }
+
+                // setInterval(getComments, 1000)
+               </script>
+               <style>
+                .footer-container{
+                    height: 23rem;
+                    width: 100%;
+                }
+               </style>
+
+<script>
+    document.addEventListener('submit', function(e) {
+e.preventDefault();
+
+const formData = new FormData();
+formData.append('username', document.querySelector('#username').value);
+formData.append('blog_id', document.querySelector('#blog_id').value);
+formData.append('comment', document.querySelector('#comment').value);
+formData.append('csrfmiddlewaretoken', document.querySelector('input[name=csrfmiddlewaretoken]').value);
+
+fetch('/comment', {
+method: 'POST',
+body: formData,
+}).then(function(response) {
+let data = response.json()
+return data
+}).catch(function(error){
+console.error('something went wrong')
+});
+
+document.querySelector('#comment').value = '';
+});
+
+</script>
+
+           
+
+    <!-- Footer section -->
+
+    <!-- <footer class="footer-container" id="footer-container">
+
+        <div class="footer-stuff">
+
+            <div class="footer-image">
+
+                <img src="{% static 'PHOTOS/logo.jpg' %}" alt="" class="goal-logo">
+
+            </div>
+
+            <nav class="footer-details">
+
+                <ul>
+
+                    <li><a href="#">Contact Us</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Terms of Use </a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Privacy Policy</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Privacy settings</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Careers</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Goal app (Android)</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Goal App (IOS)</a></li>
+
+                    <span class="line">|</span>
+
+                    <li><a href="#">Goal Live</a></li>
+
+                    <span class="line">|</span> -->
+
+                    <!-- Theme toggle button -->
+
+                    <!-- <li>
+
+                        <button class="btn place-items-center" id="theme-toggle-btn">
+
+                            <i class="ri-sun-line sun-icon"></i>
+
+                            <i class="ri-moon-line moon-icon"></i>
+
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </nav> -->
+
+            <!-- Copyright section -->
+
+            <!-- <h5 class="nigeria">Nigeria</h5>
+
+            <div class="copyright-text">
+
+                <h6 class="copy">Copyright &copy; 2022 Goal All rights reserved. The information contained in Goal may not be published, broadcast, rewritten or redistribited without the prior written authority from Goal.</h6>
+
+            </div>
+
+        </div> -->
+        <style>
+            .chat-room{
+                position: fixed;
+                bottom: 8rem;
+                right: 0rem;
+                text-align: center;
+            
+            }
+         
+            .chat-room h2{
+                font-family: myFont;
+                font-size: 1.2rem;
+                color: rgb(248, 153, 118);
+            }
+            @font-face {
+                font-family:myFont;
+                src: url('static/FONTS/google2.ttf');
+            }
+            .chat-room i{
+                font-size: 3rem;
+                color:rgb(248, 153, 118);
+            }
+        
+        
+        </style>
+             
+    
+      
+            <a href="#" class="to-top" id="to-top"><i class="ri-arrow-up-s-line to-top-button"></i></a>
+
+    </footer>
+
+    <!-- Link to JavaScript -->
+
+    <script src="{% static 'script.js' %}"></script>
+
+</body>
+
+</html>
+
+
+
+   
+
+<script src="{% static 'main.js' %}"></script>
+
+</body>
+
+</html>
